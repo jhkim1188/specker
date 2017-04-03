@@ -1,0 +1,25 @@
+.ReactModal__Body--open {
+    overflow: hidden !important;
+}
+
+#signin-left-panel {
+
+    width: 70%;
+    background-image: url("../../public/signin_main.jpg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 100%;
+    position: absolute;
+    outline: 1px solid;
+
+}
+#signin-right-panel {
+    background: #C5C3C4 !important;
+    width: 30%;
+    height: 100%;
+    outline: 1px solid;
+    position: absolute;
+    right: 0;
+
+}

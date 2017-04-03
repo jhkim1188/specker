@@ -1,0 +1,112 @@
+.homeCard{
+    height: auto;
+    width:70% !important;
+    margin-right: 50px !important;
+    margin-left: auto;
+    position: relative !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.homeContent{
+    width: 100%;
+    left: 0 !important;
+}
+
+
+#left-panel {
+    padding-left: 15%;
+    background: #C5C3C4 !important;
+    width: 65%;
+    height: auto;
+    position: absolute;
+
+    outline: 1px solid;
+
+}
+#right-panel {
+    padding-right: 15%;
+    background: #C5C3C4 !important;
+    width: 35%;
+    height: 100%;
+    outline: 1px solid;
+    position: fixed;
+    right: 0;
+
+}
+
+
+
+.thumb {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    float:left;
+    border-radius: 3px;
+    margin-left: -65px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+
+}
+
+.thumb:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.thumb img {
+    display: block; /* Otherwise it keeps some space around baseline */
+    min-width: 100%;    /* Scale up to fill container width */
+    min-height: 100%;   /* Scale up to fill container height */
+    -ms-interpolation-mode: bicubic; /* Scaled images look a bit better in IE now */
+}
+
+.card-title{
+    margin:0 !important;
+    border-bottom: 1px solid #ddd;
+    min-height: 30px;
+    padding: 10px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 2%;
+}
+
+.card-title-text{
+    font-size: 1.3vw;
+    height:auto;
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.card-title-text:hover{
+    cursor: Default;
+    color:#000;
+    text-decoration: none;
+}
+
+.card-title-author-wrapper{
+    padding-left: 1% !important;
+
+    padding-bottom: 0;
+    padding-right: 0 !important;
+}
+.card-title-author{
+    font-size: 1.3vw;
+    height:auto;
+    margin: 0;
+
+}
+
+.loader{
+    transform: translate(-50%, 0%);
+    margin-left: 55%;
+
+}
+
+
+.homeCard > .rcard> .quill > .ql-toolbar{
+    display: none;
+}

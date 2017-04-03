@@ -1,0 +1,165 @@
+
+#editor .ql-editor {
+    padding: .5em;
+    border: 1px solid #ccc;
+    max-width: 50em;
+    min-height: 8em;
+}
+
+#editor p {margin-top: 0}
+
+#editor .mention {
+    font-weight: bold;
+    color: blue;
+}
+
+.completions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.completions > li {
+    margin: 0;
+    padding: 0;
+}
+.completions > li > button {
+    box-sizing: border-box;
+    height: 2em;
+    padding: .25em .5em;
+    margin: 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+}
+.completions > li > button:hover {
+    background: #ddd;
+}
+.completions > li > button:focus {
+    background: #ddd;
+    outline: none;
+}
+.completions > li > button > .matched {
+    font-weight: bold;
+    color: black;
+}
+.completions > li > button > * {
+    vertical-align: middle;
+}
+
+ .ql-container {
+    min-height: 7em;
+
+    background: #fefcfc;
+     border-radius: 3px 3px 0px 0px;
+     border: 0 !important;
+}
+
+.ql-toolbar {
+    background: #eaecec;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+
+
+.editorCard{
+    height: auto;
+    width:70% !important;
+    margin-right: 50px !important;
+    margin-left: auto;
+    position: relative !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.editorContainer{
+    border: 2px solid #F6CD40;
+}
+
+.ql-editor.ql-blank::before{
+    font-size: 14px;
+    font-weight: normal;
+    color: #9B9B9B;
+    font-style:normal;
+    font-family: 나눔고딕, Nanum Gothic, "Nanum Gothic";
+}
+
+.ql-toolbar{
+    background: #ffffff;
+    border-radius: 0;
+    border: 0 !important;
+}
+.divider{
+    background: #E5E1E1  no-repeat scroll center;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 1px;
+}
+
+.ql-formats{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.ql-tooltip.ql-editing.ql-flip{
+    top:0 !important;
+}
+.editor {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: text;
+    padding: 16px;
+    min-height: 140px;
+    border-radius: 2px;
+    margin-bottom: 2em;
+    box-shadow: inset 0px 1px 8px -3px #ABABAB;
+    background: #fefefe;
+}
+
+.editor :global(.public-DraftEditor-content) {
+    min-height: 140px;
+}
+
+.ql-toolbar.ql-snow .ql-formats{
+    margin-right: 0;
+}
+.ql-send-container{
+    float: right !important;
+    margin-right: 5px !important;
+    margin-top: 2px;
+}
+.ql-send-btn{
+    width: 100px !important;
+    border-radius: 3px !important;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 나눔고딕, Nanum Gothic, "Nanum Gothic";
+    font-weight: bold;
+    background-color: #F6CD40 !important;
+}
+
+.ql-send-btn:hover{
+    color: #ffffff !important;
+
+}
+
+.mention {
+    border: solid 2px black;
+    border-radius : 3px;
+    background-color: darkblue;
+    color: white;
+}
+.completions {
+    list-style: none;
+    padding-left: 20px;
+}
+.completions button {
+    border-radius: 3px;
+    background-color: aqua;
+}
+

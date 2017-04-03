@@ -1,0 +1,84 @@
+#surf-top-panel {
+    background: #C5C3C4 !important;
+    height: 100px;
+}
+#surf-bottom-panel {
+    background: #C5C3C4 !important;
+}
+@media only screen and (min-width: 400px) {
+    .surfContent {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .surfContent {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .surfContent {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .surfContent {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+
+
+.surfCard{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 2px 2px 4px 0 #ccc;
+}
+.surfContent {
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+    position: static !important;
+}
+.surfWrapper {
+    width: 95%;
+    margin-bottom: 0px !important;
+}
+
+
+.surfCard > .rcard> .quill > .ql-toolbar{
+    display: none;
+}
+
+
+/*.surfCard img {*/
+    /*width: 100%;*/
+/*}*/
+/*.surfCard p {*/
+    /*width: 150px;*/
+    /*margin-top: 0;*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*font-size: 14px;*/
+    /*text-overflow: ellipsis;*/
+/*}*/
+/*.surfCard a {*/
+    /*text-decoration: none;*/
+    /*color: inherit;*/
+/*}*/
+

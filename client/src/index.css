@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 나눔고딕,Nanum Gothic, "Nanum Gothic";
+    overflow: auto;
+}
+#index{
+    height:50px;
+}
+div.navbar.navbar-inverse.navbar-fixed-top{
+    background: #1A2930 !important;
+}
+
+.navbar-brand{
+    font-size: 24px;
+    font-weight: bold;
+    color: #F6CD40 !important;
+}
+div.navbar.navbar-inverse.navbar-fixed-top{
+    border-bottom: 2px solid #F6CD40 !important;
+}
+
+.navbar-icon{
+    max-width: 30px !important;
+    height:25px;
+}
