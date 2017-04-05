@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HomeLeftPanel from './homeLeftPanel';
 import HomeRightPanel from './homeRightPanel';
+import FeedReadMore from '../feed/feedReadMore';
 import '../../styles/home.css';
 
 
@@ -10,6 +11,7 @@ class Home extends Component{
             <div>
                 <HomeLeftPanel />
                 <HomeRightPanel />
+                <FeedReadMore />
             </div>
         )
     }

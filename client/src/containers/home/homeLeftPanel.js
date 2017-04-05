@@ -6,6 +6,9 @@ import axios from 'axios';
 
 import HomeCard from '../../components/home/homeCard';
 import HomeEditor from '../../components/home/homeEditor';
+import HomeEditorOld from '../../components/home/homeEditor-old';
+
+
 import { bindActionCreators } from 'redux';
 import { sendHomeFeed } from '../../actions/index';
 import { connect } from 'react-redux';
@@ -74,7 +77,7 @@ class HomeLeftPanel extends Component{
         var items = [];
         this.state.feeds.map((feed, i) => {
             items.push(
-                <HomeCard key={i} thumb={feed.user.gravatar} content={feed.content}/>
+                <HomeCard key={i} thumb={feed.user.gravatar} feed={feed}/>
             );
         });
 
@@ -96,7 +99,7 @@ class HomeLeftPanel extends Component{
                       loader={loader}>
 
                       <div>
-                          <HomeEditor user={this.props.user} onSend={this.props.sendHomeFeed} />
+                          <HomeEditorOld user={this.props.user} onSend={this.props.sendHomeFeed} />
                           {items}
                       </div>
                   </InfiniteScroll>

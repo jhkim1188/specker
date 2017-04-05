@@ -1,72 +1,4 @@
 
-#editor .ql-editor {
-    padding: .5em;
-    border: 1px solid #ccc;
-    max-width: 50em;
-    min-height: 8em;
-}
-
-#editor p {margin-top: 0}
-
-#editor .mention {
-    font-weight: bold;
-    color: blue;
-}
-
-.completions {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: white;
-    border-radius: 2px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-}
-.completions > li {
-    margin: 0;
-    padding: 0;
-}
-.completions > li > button {
-    box-sizing: border-box;
-    height: 2em;
-    padding: .25em .5em;
-    margin: 0;
-    display: block;
-    width: 100%;
-    text-align: left;
-    border: none;
-    background: none;
-}
-.completions > li > button:hover {
-    background: #ddd;
-}
-.completions > li > button:focus {
-    background: #ddd;
-    outline: none;
-}
-.completions > li > button > .matched {
-    font-weight: bold;
-    color: black;
-}
-.completions > li > button > * {
-    vertical-align: middle;
-}
-
- .ql-container {
-    min-height: 7em;
-
-    background: #fefcfc;
-     border-radius: 3px 3px 0px 0px;
-     border: 0 !important;
-}
-
-.ql-toolbar {
-    background: #eaecec;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-}
-
-
-
 .editorCard{
     height: auto;
     width:70% !important;
@@ -81,34 +13,6 @@
     border: 2px solid #F6CD40;
 }
 
-.ql-editor.ql-blank::before{
-    font-size: 14px;
-    font-weight: normal;
-    color: #9B9B9B;
-    font-style:normal;
-    font-family: 나눔고딕, Nanum Gothic, "Nanum Gothic";
-}
-
-.ql-toolbar{
-    background: #ffffff;
-    border-radius: 0;
-    border: 0 !important;
-}
-.divider{
-    background: #E5E1E1  no-repeat scroll center;
-    margin-left: 3%;
-    margin-right: 3%;
-    height: 1px;
-}
-
-.ql-formats{
-    display: inline-block;
-    vertical-align: middle;
-}
-
-div.ql-tooltip.ql-editing.ql-flip{
-    top:0 !important;
-}
 .editor {
     box-sizing: border-box;
     border: 1px solid #ddd;
@@ -123,29 +27,6 @@ div.ql-tooltip.ql-editing.ql-flip{
 
 .editor :global(.public-DraftEditor-content) {
     min-height: 140px;
-}
-
-.ql-toolbar.ql-snow .ql-formats{
-    margin-right: 0;
-}
-.ql-send-container{
-    float: right !important;
-    margin-right: 5px !important;
-    margin-top: 2px;
-}
-.ql-send-btn{
-    width: 100px !important;
-    border-radius: 3px !important;
-    color: #ffffff;
-    font-size: 14px;
-    font-family: 나눔고딕, Nanum Gothic, "Nanum Gothic";
-    font-weight: bold;
-    background-color: #F6CD40 !important;
-}
-
-.ql-send-btn:hover{
-    color: #ffffff !important;
-
 }
 
 .mention {
@@ -163,3 +44,507 @@ div.ql-tooltip.ql-editing.ql-flip{
     background-color: aqua;
 }
 
+.mentionSuggestionsEntryId{
+    display: none;
+}
+
+div.DraftEditor-editorContainer{
+    min-height: 100px;
+    padding: 10px;
+}
+
+
+.RichEditor-editor .RichEditor-blockquote {
+    border-left: 5px solid #eee;
+    color: #666;
+    font-family: 'Hoefler Text', 'Georgia', serif;
+    font-style: italic;
+    margin: 16px 0;
+    padding: 10px 20px;
+    cursor: text;
+}
+
+.RichEditor-editor .public-DraftStyleDefault-pre {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-family: 'Inconsolata', 'Menlo', 'Consolas', monospace;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.RichEditor-controls {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+    user-select: none;
+}
+
+.RichEditor-styleButton {
+    color: #999;
+    cursor: pointer;
+    margin-right: 16px;
+    padding: 2px 0;
+    display: inline-block;
+}
+
+.RichEditor-activeButton {
+    color: #5890ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.RichEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
+    display: none;
+}
+
+
+
+
+.addImage {
+    background: #FFF;
+    display: inline-block;
+}
+
+.addImagePopover {
+    margin-top: 10px;
+    background: #FFF;
+    position: absolute;
+    height: 54px;
+    width: 300px;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: 0px 4px 30px 0px rgba(220,220,220,1);
+    z-index: 1000;
+}
+
+.addImageClosedPopover {
+    display: none;
+}
+
+.addImageButton {
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0;
+    color: #888;
+    margin: 0;
+    border-radius: 1.5em;
+    cursor: pointer;
+    height: 1.5em;
+    width: 2.5em;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.addImageButton:focus {
+    outline: 0; /* reset for :focus */
+}
+
+.addImageButton:hover {
+    background: #f3f3f3;
+}
+
+.addImageButton:active {
+    background: #e6e6e6;
+}
+
+.addImagePressedButton {
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0;
+    color: #888;
+    margin: 0;
+    border-radius: 1.5em;
+    cursor: pointer;
+    height: 1.5em;
+    width: 2.5em;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin: 0;
+    background: #ededed;
+}
+
+.addImageBottomGradient {
+    width: 100%;
+    height: 1em;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+
+.addImageInput {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: text;
+    padding: 4px;
+    width: 78%;
+    border-radius: 2px;
+    margin-bottom: 1em;
+    box-shadow: inset 0px 1px 8px -3px #ABABAB;
+    background: #fefefe;
+}
+
+.addImageConfirmButton {
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0;
+    color: #888;
+    margin: 0;
+    border-radius: 2.1em;
+    cursor: pointer;
+    height: 2.1em;
+    width: 18%;
+    font-size: 1em;
+    line-height: 2.1em;
+    margin: 0;
+    margin-left: 4%;
+}
+
+.addImageConfirmButton:focus {
+    outline: 0; /* reset for :focus */
+}
+
+.addImageConfirmButton:hover {
+    background: #f3f3f3;
+}
+
+.addImageConfirmButton:active {
+    background: #e6e6e6;
+}
+
+.RichEditor-controls{
+    clear: both;
+}
+
+
+.root {
+    text-align: center;
+    padding-top: 10em;
+}
+
+.param {
+    margin: 10px 0;
+}
+
+.paramBig {
+    margin: 10px 0;
+    display: flex;
+}
+
+.paramName {
+    font-weight: bold;
+    width: 175px;
+    min-width: 175px;
+    display: inline-block;
+}
+
+.subParams {
+    margin-left: 175px;
+    margin-top: 10px;
+}
+
+.subParam {
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.subParamName {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.listEntry {
+    margin-top: 1rem;
+}
+
+.guideCodeBlock {
+    margin-top: 1rem;
+    margin-bottom: 1rem !important;
+}
+
+
+.draftJsEmojiPlugin__alignmentTool__2mkQr {
+    left: 50%;
+    -webkit-transform: translate(-50%) scale(0);
+    transform: translate(-50%) scale(0);
+    position: absolute;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px 0px rgba(220,220,220,1);
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.draftJsEmojiPlugin__alignmentTool__2mkQr:after, .draftJsEmojiPlugin__alignmentTool__2mkQr:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.draftJsEmojiPlugin__alignmentTool__2mkQr:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 4px;
+    margin-left: -4px;
+}
+.draftJsEmojiPlugin__alignmentTool__2mkQr:before {
+    border-color: rgba(221, 221, 221, 0);
+    border-top-color: #ddd;
+    border-width: 6px;
+    margin-left: -6px;
+}
+
+
+
+
+.addVideo {
+    background: #FFF;
+    display: inline-block;
+}
+
+.addVideoPopover {
+    margin-top: 10px;
+    background: #FFF;
+    position: absolute;
+    height: 54px;
+    width: 300px;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: 0px 4px 30px 0px rgba(220, 220, 220, 1);
+    z-index: 1000;
+}
+
+.addVideoClosedPopover {
+    display: none;
+}
+
+.addVideoButton {
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0;
+    color: #888;
+    margin: 0;
+    border-radius: 1.5em;
+    cursor: pointer;
+    height: 1.5em;
+    width: 2.5em;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.addVideoButton:focus {
+    outline: 0; /* reset for :focus */
+}
+
+.addVideoButton:hover {
+    background: #f3f3f3;
+}
+
+.addVideoButton:active {
+    background: #e6e6e6;
+}
+
+.addVideoPressedButton {
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0;
+    color: #888;
+    margin: 0;
+    border-radius: 1.5em;
+    cursor: pointer;
+    height: 1.5em;
+    width: 2.5em;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin: 0;
+    background: #ededed;
+}
+
+.addVideoBottomGradient {
+    width: 100%;
+    height: 1em;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.addVideoInput {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: text;
+    padding: 4px;
+    width: 78%;
+    border-radius: 2px;
+    margin-bottom: 1em;
+    box-shadow: inset 0px 1px 8px -3px #ABABAB;
+    background: #fefefe;
+}
+
+.addVideoConfirmButton {
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0;
+    color: #888;
+    margin: 0;
+    border-radius: 2.1em;
+    cursor: pointer;
+    height: 2.1em;
+    width: 18%;
+    font-size: 1em;
+    line-height: 2.1em;
+    margin: 0;
+    margin-left: 4%;
+}
+
+.addVideoConfirmButton:focus {
+    outline: 0; /* reset for :focus */
+}
+
+.addVideoConfirmButton:hover {
+    background: #f3f3f3;
+}
+
+.addVideoConfirmButton:active {
+    background: #e6e6e6;
+}
+
+.buttonWrapper {
+    display: inline-block;
+}
+
+.button {
+    background: #333;
+    color: #ddd;
+    font-size: 18px;
+    border: 0;
+    padding-top: 5px;
+    vertical-align: bottom;
+    height: 34px;
+    width: 36px;
+    border-radius: 4px;
+}
+
+.button svg {
+    fill: #ddd;
+}
+
+.button:hover, .button:focus {
+    background: #444;
+    outline: 0; /* reset for :focus */
+}
+
+.active {
+    color: #6a9cc9;
+}
+
+.active svg {
+    fill: #6a9cc9;
+}
+
+.toolbar {
+    left: 50%;
+    transform: translate(-50%) scale(0);
+    position: absolute;
+    border: 1px solid #111;
+    background: #333;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgba(220,220,220,1);
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.toolbar:after, .toolbar:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.toolbar:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #333;
+    border-width: 4px;
+    margin-left: -4px;
+}
+
+.toolbar:before {
+    border-color: rgba(221, 221, 221, 0);
+    border-top-color: #111;
+    border-width: 6px;
+    margin-left: -6px;
+}
+div.DraftEditor-root{
+    position: relative;
+    height: inherit;
+    text-align: initial;
+}
+
+.public-DraftEditor-content{
+    outline: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+}
+
+
+
+.tag, .tag:visited {
+    color: #575f67;
+    cursor: pointer;
+    display: inline-block;
+    background: #e6f3ff;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.tag:hover, .tag:focus {
+    color: #677584;
+    background: #edf5fd;
+    outline: 0; /* reset for :focus */
+}
+
+.tag:active {
+    color: #222;
+    background: #455261;
+}

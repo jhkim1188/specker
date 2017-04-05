@@ -123,11 +123,11 @@ export function authError(error) {
     };
 }
 
-export function sendHomeFeed(value){
+export function sendHomeFeed(html, context){
     return function(dispatch){
-        axios.post(`${SERVER_URL}/sendHomeFeed`, {html:value},{
-            headers: { 'authorization': localStorage.getItem('token'),
-                'Content-Type': 'application/json'}
+
+        axios.post(`${SERVER_URL}/sendHomeFeed`, {html:html, context:context},{
+            headers: { 'authorization': localStorage.getItem('token'),}
         }).then(response => {
             // dispatch(push('/'));
             window.location.reload(true);

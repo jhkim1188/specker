@@ -7,7 +7,7 @@ import '../../styles/surf.css';
 class Surf extends Component{
     render(){
         return(
-            <div>
+            <div className="surfContainer">
                 <SurfTopPanel/>
                 <SurfBottomPanel/>
             </div>
